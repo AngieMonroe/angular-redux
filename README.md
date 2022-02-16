@@ -1,6 +1,6 @@
 # AngularRedux
 
-https://angiemonroe.github.io/angular-redux/characters
+https://angiemonroe.github.io/angular-redux/
 
 Angular application that consumes API "https://rickandmortyapi.com/" 
 
