@@ -6,11 +6,15 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng test --browser=ChromeHeadless --code-coverage=true --watch=false",
+    "test:coverage": "ng test --code-coverage --watch=true",
+    "test:watch": "ng test --code-coverage --watch=true",
+    "pipe:test": "ng test --browsers --code-coverage"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
+    "@angular/cdk": "^13.2.2",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
     "@angular/core": "~13.2.0",
@@ -18,6 +22,13 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@ngrx/effects": "^13.0.2",
+    "@ngrx/store": "^13.0.2",
+    "@ngrx/store-devtools": "^13.0.2",
+    "@popperjs/core": "^2.11.2",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "mdb-ui-kit": "^3.10.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -1,0 +1,26 @@
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 m-4 g-2" *ngIf="data !== null && findValue === null">
+  <div class="col" *ngFor="let item of data">
+    <div class="card  h-100 text-center">
+      <div class="card-header">{{item.type}}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.dimension}}</p>
+        <button (click)="getCharacters(item.residents)" class="btn btn-info">Characters</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center row-cols-1 row-cols-md-3 row-cols-lg-4 m-4 g-2"
+  *ngIf="findValue !== null">
+  <div class="col" *ngFor="let item of findValue">
+    <div class="card  h-100 text-center">
+      <div class="card-header">{{item.type}}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.dimension}}</p>
+        <button (click)="getCharacters(item.residents)" class="btn btn-info">Characters</button>
+      </div>
+    </div>
+  </div>
+</div>

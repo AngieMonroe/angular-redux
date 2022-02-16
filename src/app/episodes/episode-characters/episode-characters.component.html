@@ -1,0 +1,29 @@
+<div class="row d-flex justify-content-center row-cols-1 row-cols-md-3 row-cols-lg-4 m-2 g-3" *ngIf="data !== null && findValue === null">
+  <div class="card m-2" *ngFor="let item of data">
+    <img src="{{item.image}}" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.location.name}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{item.origin.name}}</li>
+      <li class="list-group-item">{{item.species}}</li>
+      <li class="list-group-item">{{item.status}}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center row-cols-1 row-cols-md-3 row-cols-lg-4 m-2 g-3" *ngIf="findValue !== null">
+  <div class="card m-2" *ngFor="let item of findValue">
+    <img src="{{item.image}}" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.location.name}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{item.origin.name}}</li>
+      <li class="list-group-item">{{item.species}}</li>
+      <li class="list-group-item">{{item.status}}</li>
+    </ul>
+  </div>
+</div>

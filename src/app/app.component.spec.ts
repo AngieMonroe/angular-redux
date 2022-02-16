@@ -1,4 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,6 +11,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [HttpClientModule, RouterTestingModule, StoreModule.forRoot({})],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
@@ -19,13 +25,6 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-redux'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-redux');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-redux app is running!');
+    expect(app.title).toEqual('ryck and morty');
   });
 });

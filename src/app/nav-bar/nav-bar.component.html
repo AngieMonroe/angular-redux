@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <div class="navbar-brand me-4">
+      <img src="assets/Rick_and_Morty_logo.png" height="22" alt="Rick and Morty" loading="lazy" />
+    </div>
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button routerLink="/characters" type="button" class="btn btn-lg btn-secondary px-3 m-2"
+            (click)="getCharacters()">
+            Characters
+          </button>
+        </li>
+        <li class="nav-item">
+          <button routerLink="/locations" type="button" class="btn btn-lg btn-info px-3 m-2" (click)="getLocations()">
+            Locations
+          </button>
+        </li>
+        <li class="nav-item">
+          <button routerLink="/episodes" type="button" class="btn btn-lg btn-warning px-3 m-2" (click)="getEpisodes()">
+            Episodes
+          </button>
+        </li>
+      </ul>
+      <form class="d-flex input-group w-50">
+        <input class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"
+          (keyup)="search($event)" />
+        <span class="input-group-text text-white border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </form>
+    </div>
+  </div>
+</nav>
