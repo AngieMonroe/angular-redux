@@ -9,7 +9,8 @@
     "test": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng test --browser=ChromeHeadless --code-coverage=true --watch=false",
     "test:coverage": "ng test --code-coverage --watch=true",
     "test:watch": "ng test --code-coverage --watch=true",
-    "pipe:test": "ng test --browsers --code-coverage"
+    "pipe:test": "ng test --browsers --code-coverage",
+    "deploy": "ng build --prod --base-href=/angular-redux/"
   },
   "private": true,
   "dependencies": {
