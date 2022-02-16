@@ -1,5 +1,7 @@
 # AngularRedux
 
+https://angiemonroe.github.io/angular-redux/characters
+
 Angular application that consumes API "https://rickandmortyapi.com/" 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
